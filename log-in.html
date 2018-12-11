@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=80%">
+	<title>Log-in GeoGeeks</title>
+	<meta name="author" content="Codrops" />
+	<link rel="stylesheet" type="text/css" href="./css/login.css" />
+	<link rel="icon" type="image/png" href="./img/gg.png">
+
+	<script>document.documentElement.className="js";var supportsCssVars=function(){var e,t=document.createElement("style");return t.innerHTML="root: { --tmp-var: bold; }",document.head.appendChild(t),e=!!(window.CSS&&window.CSS.supports&&window.CSS.supports("font-weight","var(--tmp-var)")),t.parentNode.removeChild(t),e};supportsCssVars()||alert("Please view this demo in a modern browser that supports CSS Variables.");</script>
+
+</head>
+<body class="demo-2 loading">
+	<main>
+		<div class="content content--side">
+
+		   <div class="form">
+			  <div >
+			  	<img src="img/icono.png" class="centro">
+			  </div>
+		   </div>
+			<form class="form" action="" method="">
+
+				<div class="form__item">
+					<label class="form__label" for="email">Nombre:</label>
+	   				<input type="text" class="form__input" name="" id="nombres" placeholder="nombre..." required>
+				</div>
+
+				<div class="form__item">
+					<label class="form__label" for="password">Contraseña:</label>
+					<div class="form__input-wrap">
+
+						<input class="form__input" type="password" name="password" id="password" placeholder="contraseña...">
+						<br>
+						<p class="form__password-strength" id="strength-output"></p>
+					</div>
+				</div>
+				<div class="form__item">
+					<br>
+					<button type="button" class="form__button" name="">Ingresar</button>
+				</div>
+			</form>
+		</div>
+		<div class="content content--side">
+			<div class="poster" style="background-image:url(img/2.jpg)"></div>
+			<div class="canvas-wrap">
+				<canvas></canvas>
+			</div>
+		</div>
+	</main>
+	<script src="js/login/imagesloaded.pkgd.min.js"></script>
+	<script src="js/login/zxcvbn.js"></script>
+	<script src="js/login/demo2.js"></script>
+</body>
+</html>

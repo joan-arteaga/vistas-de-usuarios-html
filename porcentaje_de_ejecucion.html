@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>porcentajes de ejecución GeoGeeks</title>
+
+	<!-- bootstrap -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<!-- css bootstrap -->
+	<link rel="stylesheet" type="text/css" href="css/porcentaje-e.css">
+	<link rel="icon" type="image/png" href="./img/gg.png">
+
+
+		<script>document.documentElement.className="js";var supportsCssVars=function(){var e,t=document.createElement("style");return t.innerHTML="root: { --tmp-var: bold; }",document.head.appendChild(t),e=!!(window.CSS&&window.CSS.supports&&window.CSS.supports("font-weight","var(--tmp-var)")),t.parentNode.removeChild(t),e};supportsCssVars()||alert("Please view this demo in a modern browser that supports CSS Variables.");</script>
+
+</head>
+<body>
+
+<div>
+
+	<div>
+		<a href="">
+			<img  class="ordenar" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFqSURBVGhD7ZoxTgJRFEUnGqNih0GCBSSG0lgosdQl2JJQ4iqgh5oN2LgIF0Rs2YDReO/wX/LyItb//vyTnMxANYc/DC8zNJVKJVse4AYet69EYcQOfsE3KBljEQx4dPtSMT5iAF/CexIx8YDv4BoSmRh/oFdwASMr+AOf21cZEj/tSxhD5vA7bbPER3TgOzyFHqkIrsQRfE1bQy7iA46gRy6CPMGT/W6L5EowwiMVcQH5XRhC6ZXg1YlfbI9URA924RmUvjotkx6piGt4CyNyK8Ep1gZAQyrCRvGI3Er4UdyQijg0imcfQYoJIfHUipxD+Zgb+Lnf1Y/hinC24owlH8Npl1MvkY8hfchfe/kY/2tfxMpMkvIx0yQpYmVm8B7Kx1gIKWJleAHgsCkfw6sZZzVSxMrYTTv5GH/TTj6GN7a3aZv9YwXjUMwY/ncKZslfBywXYfgDl30YaliM9ONpgzHyfxioVDRoml9LiaCLvL/Z/QAAAABJRU5ErkJggg==">
+		</a>
+	</div>
+
+	<div class="caja">
+		<div class="caja separacion espacio col-">
+			<div class="espacio">
+			  <select id="estado" class="btn btn-secondary tamaño" required>
+			     <option selected disabled>Seleccionar el Tablero...</option>
+			     <option>Tablero1</option>
+			     <option>Tablero2</option>
+			     <option>Tablero3</option>
+			     <option>Tablero4</option>
+			     <option>Tablero5</option>
+			  </select>
+	 		</div>
+
+	 		<div class="espacio">
+			  <select id="estado" class="btn btn-secondary tamaño" required>
+			     <option selected disabled>Tarea...</option>
+			     <option>Tarea1</option>
+			     <option>Tarea2</option>
+			     <option>Tarea3</option>
+			     <option>Tarea4</option>
+			     <option>Tarea5</option>
+			  </select>
+	 		</div>
+
+			<div class="contenedor espacio alinear">
+				<p class="titulosinsertperson">Porcentage de ejecución:</p>
+			</div>
+
+			<div>
+   		    	<div class="container">
+   			      <input type="radio" class="radio" name="progress" value="five" id="five">
+   			      <label for="five" class="label">5%</label>
+   			    
+   			      <input type="radio" class="radio" name="progress" value="twentyfive" id="twentyfive" checked>
+   			      <label for="twentyfive" class="label">25%</label>
+   			    
+   			      <input type="radio" class="radio" name="progress" value="fifty" id="fifty">
+   			      <label for="fifty" class="label">50%</label>
+   			    
+   			      <input type="radio" class="radio" name="progress" value="seventyfive" id="seventyfive">
+   			      <label for="seventyfive" class="label">75%</label>
+   			    
+   			      <input type="radio" class="radio" name="progress" value="onehundred" id="onehundred">
+   			      <label for="onehundred" class="label">100%</label>
+   			    
+   			      <div class="progress">
+   			        <div class="progress-bar"></div>
+   			      </div>
+
+   			      <div>
+   			      	<button class="btn btn-primary espaciof">Guardar.</button>
+   			      </div>
+   			    </div>
+			</div>
+		</div>
+	</div>
+
+</div>
+
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<script type="text/javascript" src="./js/inscripcion.js"></script>
+</body>
+</html>

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Regisro personas GeoGeeks</title>
+	<!-- bootstrap -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<!-- css bootstrap -->
+	<link rel="stylesheet" type="text/css" href="./css/registro-p.css">
+    <link rel="icon" type="image/png" href="./img/gg.png">
+
+
+
+
+		<script>document.documentElement.className="js";var supportsCssVars=function(){var e,t=document.createElement("style");return t.innerHTML="root: { --tmp-var: bold; }",document.head.appendChild(t),e=!!(window.CSS&&window.CSS.supports&&window.CSS.supports("font-weight","var(--tmp-var)")),t.parentNode.removeChild(t),e};supportsCssVars()||alert("Please view this demo in a modern browser that supports CSS Variables.");</script>
+
+
+</head>
+<body>
+
+
+<h3 id="titulo"><ul><u>Registro</u></ul></h3>
+
+
+<form id="formularioEnvio" action="index.html" method="post" onsubmit="return enviar()">
+<div class="d-flex encajar">
+<div class="encajar2">
+ 	 <img class="sizeimage" src="./resourses/fotousuario.png">
+
+   <!-- cajita es una clase para definir el tamaño del input de url de la foto -->
+  <div class="cajita input-group mb-3 ">
+    <input id="foto" type="text" class="form-control" placeholder="URL de la foto..." required>
+      <div class="input-group-append">
+        <button class="btn btn-outline-secondary" type="">Buscar.</button>
+      </div>
+  </div>
+</div>
+
+
+
+
+
+<div class="encajar1">
+
+	<div class="row">
+		<div class="col-">
+		   <h6 class="titulosinsertperson">Nombres:</h6>
+		   <div class="input-group indice col-md-6 inputt">
+		   <input type="text" class="form-control" name="" id="nombres" placeholder="nombres..." required>
+		   </div>
+		</div>
+
+        <div class="espacio col-">
+		   <h6 class="titulosinsertperson">Apellidos:</h6>
+		   <div class="input-group indice col-md-6 inputt">
+		   <input type="text" class="form-control" name="" id="apellidos" placeholder="apellidos..." required>
+		   </div>
+	    </div>
+    </div>
+
+
+
+
+
+	<div class="row">
+		<div class="col-">
+			<br>
+		    <h6 class="titulosinsertperson">Edad:</h6>
+		    <div class="input-group indice col-md-6 inputt">
+			<input type="text" class="form-control" name="" id="edad" placeholder="edad..." required>
+		    </div>
+		</div>
+
+		<div class="espacio col-">
+			<h6 class="titulosinsertperson">Fecha de <br>Nacimiento:</h6>
+			<div class="input-group indice col-md-6 inputt">
+			<input type="date" class="form-control calendarios col-" name="" id="fNto" required/>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+	<div class="row">
+		<div class="col-">
+			<br>
+			<h6 class="titulosinsertperson">Correo:</h6>
+			<div class="input-group indice col-md-6 inputt">
+			<input type="text" class="form-control" name="" id="correo" placeholder="correo..." required>
+			</div>
+		</div>
+
+		<div class="espacio col-">
+			<h6 class="titulosinsertperson">Documento <br>de Identidad</h6>
+			<div class="input-group indice col-md-6 inputt">
+			<input type="text" class="form-control" name="" id="documentoIdentidad" placeholder="documento de identidad..." required>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+	<div class="row">
+		<div class="col-">
+			<h6 class="titulosinsertperson">Universidad:</h6>
+			<div class="input-group indice col-md-6 inputt">
+			<input type="text" class="form-control" name="" id="universidad" placeholder="universidad..." required>
+			</div>
+		</div>
+
+		<div class="espacio col-">
+			<h6 class="titulosinsertperson">Telefono:</h6>
+			<div class="input-group indice col-md-6 inputt">
+			<input type="text" class="form-control" name="" id="telefono" placeholder="telefono..." required>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+	<div class="row">
+		<div class="col-">
+			<h6 class="titulosinsertperson">Fecha <br>estimación <br>de Grado:</h6>
+			<div class="input-group indice col-md-6 inputt">
+			<input type="text" class="form-control" name="" id="feg" placeholder="estimación..." required>
+			</div>
+			<div class="input-group indice col-md-6 inputt">
+			<input type="date" class="form-control calendarios col-" name="" id="fechaGrado" required/>
+			</div>
+		</div>
+
+		<div class="espacio col-">
+			<br><br><br>
+			<h6 class="espacio titulosinsertperson">Estado:</h6>
+			<div class="espacio">
+			  <select id="estado" class="btn btn-secondary abajo" required>
+			     <option selected disabled>Seleccionar</option>
+			     <option value=1>Activo</option>
+			     <option value=0>Inactivo</option>
+			  </select>
+	 		</div>
+	 	</div>
+	</div>
+
+
+
+
+
+	<div class="row">
+		<div class="col-">
+			<h6 class="titulosinsertperson">Talla:</h6>
+			<div class="input-group indice col-md-6 inputt">
+			<input type="text" class="form-control" name="" id="tallaCamiseta" placeholder="talla..." required>
+			</div>
+		</div>
+
+		<div class="espacio col-">
+			<h6 class="titulosinsertperson">Rol:</h6>
+			<div class="input-group indice col-md-6 inputt">
+			<input type="text" class="form-control" name="" id="rol" placeholder="rol..." required>
+			</div>
+		</div>
+	</div>
+
+
+
+<br><br>
+<button type="submit" class="btn btn-primary">Guardar</button>
+
+</div>
+
+</div>
+</form>
+
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<script type="text/javascript" src="./js/registro-p.js"></script>
+</body>
+</html>

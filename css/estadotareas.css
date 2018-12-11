@@ -1,0 +1,214 @@
+body, h3{
+	zoom:100%;
+	margin-top: 75px;
+	margin-bottom: 85px;
+	font-family: Comic Sans MS;
+	text-align: center;
+}
+th, td{
+	text-align: center;
+}
+.table td, .table th {
+    border-top: 1px solid #607d8b;
+}
+.table thead th{
+    vertical-align: bottom;
+    border-bottom: 2px solid #506a77;
+}
+.barras {
+    background-color: #607d8b;
+    color: white;
+}
+.caja{
+border-radius: 4px;
+border: 2px solid darkgray;
+padding: 48px 28px 28px 28px;
+min-width: 460px;
+min-height: 339px;
+max-width: 1260px;
+max-height: 1253px;
+margin: 0px auto;
+}
+.progress{
+	background-color: #00bcd433;
+	height: 27px;
+	border-radius: 50px;
+}
+.progress-bar{
+	border-radius: 50px;
+}
+.ajustar{
+text-align: center;
+}
+.b1{
+	color: red;
+	background-color: red;
+}
+/*esto pone el color apartir de los 768 pixeles*/
+@media(max-width: 863px){
+	span.phone::before {
+	content: '\A'; white-space: pre;
+	}
+	}
+
+
+/*****************************************botones chequeo*****************************************/
+
+.boxy,
+.boxy label,
+.boxy input {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 28px;
+  height: 28px;
+  display: block;
+  position: relative;
+  outline: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.boxy {
+  background: linear-gradient(300deg, #936a3e, #6f502f);
+  box-shadow: inset 2px 2px 10px -1px #4b3620;
+  margin-left: 50px;
+  margin-right: 120px;
+}
+.boxy:before {
+  content: "\f00c";
+  position: absolute;
+  left: 0;
+  right: 0;
+  line-height: 28px;
+  color: white;
+  text-align: center;
+  font-family: "Font Awesome 5 Free";
+  font-size: 16px;
+}
+.boxy label, .boxy label:before, .boxy label:after,
+.boxy input,
+.boxy input:before,
+.boxy input:after {
+  content: "";
+  position: absolute;
+  -webkit-perspective: 200px;
+          perspective: 200px;
+}
+.boxy label:before, .boxy label:after,
+.boxy input:before,
+.boxy input:after {
+  box-shadow: 0 0 0.5px 0px #4b3620;
+  transition: all 0.3s ease;
+}
+.boxy label {
+  text-indent: 56px;
+  white-space: nowrap;
+  line-height: 28px;
+}
+.boxy label:before,
+.boxy label:after {
+  width: 50%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  background: linear-gradient(270deg, #a57746, #936a3e);
+}
+.boxy label:after {
+  right: 0;
+  left: auto;
+  -webkit-transform-origin: right;
+          transform-origin: right;
+  background: linear-gradient(90deg, #a57746, #936a3e);
+}
+.boxy input:before,
+.boxy input:after {
+  width: 100%;
+  height: 50%;
+  -webkit-transform-origin: top;
+          transform-origin: top;
+  background: linear-gradient(0deg, #a57746, #936a3e);
+}
+.boxy input:after {
+  bottom: 0;
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+  background: linear-gradient(180deg, #a57746, #936a3e);
+}
+
+.boxy input:checked:before {
+  -webkit-transform: rotate3d(1, 0, 0, 125deg);
+          transform: rotate3d(1, 0, 0, 125deg);
+  background: linear-gradient(-20deg, #a57746, #6f502f);
+}
+.boxy input:checked:after {
+  -webkit-transform: rotate3d(1, 0, 0, -125deg);
+          transform: rotate3d(1, 0, 0, -125deg);
+  background: linear-gradient(165deg, #a57746, #6f502f);
+}
+.boxy input:checked + label:before {
+  -webkit-transform: rotate3d(0, 1, 0, -125deg);
+          transform: rotate3d(0, 1, 0, -125deg);
+  background: linear-gradient(270deg, #a57746, #6f502f);
+}
+.boxy input:checked + label:after {
+  -webkit-transform: rotate3d(0, 1, 0, 125deg);
+          transform: rotate3d(0, 1, 0, 125deg);
+  background: linear-gradient(90deg, #a57746, #6f502f);
+}
+.boxy:hover input:not(:checked) + label:before,
+.boxy input:focus:not(:checked) + label:before {
+  -webkit-transform: rotate3d(0, 1, 0, -40deg);
+          transform: rotate3d(0, 1, 0, -40deg);
+  box-shadow: 0 0 0.5px 0px #4b3620, 3px 0px 2px rgba(0, 0, 0, 0.2);
+}
+.boxy:hover input:not(:checked) + label:after,
+.boxy input:focus:not(:checked) + label:after {
+  -webkit-transform: rotate3d(0, 1, 0, 40deg);
+          transform: rotate3d(0, 1, 0, 40deg);
+  box-shadow: 0 0 0.5px 0px #4b3620, -3px 0px 2px rgba(0, 0, 0, 0.2);
+}
+.boxy input:focus {
+  outline: 1px dotted !important;
+  outline-offset: 2px;
+}
+.boxy input:focus:checked {
+  outline-offset: 5px;
+}
+
+.boxy label:before {
+  transition-delay: 0.1s;
+}
+
+.boxy label:after {
+  transition-delay: 0.15s;
+}
+
+.boxy input:checked + label:before {
+  transition-delay: 0s;
+}
+
+.boxy input:checked + label:after {
+  transition-delay: 0.1s;
+}
+
+.boxy input:checked:before {
+  transition-delay: 0.15s;
+}
+
+.boxy input:checked:after {
+  transition-delay: 0.2307692308s;
+}
+
+/* fonts */
+h1 {
+  margin: 10px 0 40px;
+}
+h1 span {
+  opacity: 0.7;
+  color: #6f502f;
+}

@@ -1,0 +1,27 @@
+img{
+	max-width: 73px;
+	max-height: 73px;
+	padding-right: 13px;
+}
+input{
+	margin: 0px auto;
+	display: flex;
+}
+hr{
+	border-top: 1.5px solid #000000;
+}
+
+
+.input-group {
+	align-items: center;
+}
+.innercaja{
+    border-radius: 10px;
+    border: 2px solid #000000ab;
+    max-width: 950px;
+    height: 468px;
+    padding: 25px;
+    margin: 0px auto;
+    margin-top: 150px;
+}
+

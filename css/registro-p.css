@@ -1,0 +1,99 @@
+body{
+ zoom: 95%;
+}
+
+
+/*clases para vista de inscripcion a la pagina*/
+
+#imageninsert{
+ width: 50px;
+ margin: 30px;
+ height: auto;
+}
+  /*solo es para el h3 que dice registro en HTML*/
+#titulo{
+  margin: 30px 60px;
+}
+/*este es el bpton submit y su ubicacion*/
+
+
+
+
+/* Page Loader */
+.js .loading::before {
+  content: '';
+  position: fixed;
+  z-index: 100000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--color-bg);
+}
+
+.js .loading::after {
+  content: '';
+  position: fixed;
+  z-index: 100000;
+  top: 50%;
+  left: 50%;
+  width: 60px;
+  height: 60px;
+  margin: -30px 0 0 -30px;
+  pointer-events: none;
+  border-radius: 50%;
+  opacity: 0.4;
+  background: var(--color-link);
+  animation: loaderAnim 0.7s linear infinite alternate forwards;
+}
+
+.sizeimage{
+width: 230px;
+height: 230px;
+}
+.cajita{
+	width: 230px;
+  margin-top: 23px;
+}
+.calendarios{
+  width: 143px;
+  font-size: 12px;
+}
+.titulosinsertperson{
+  font-size: 18.5px;
+  text-align: left;
+  margin: 30px 0px 10px 30px;
+}
+.indice{
+   margin: auto 20px;
+   width: 300px;
+}
+.inputt{
+  padding: 0px 0px 0px 0px;
+  max-width: 505px;
+}
+.abajo{
+  margin-bottom: 20px;
+}
+.espacio{
+   margin: auto 20px;
+}
+.centro{
+  display: block;
+}
+.encajar{
+  margin: 30px 0px 0px 140px;
+}
+.encajar1{
+/*border-radius: 6px;*/
+/*border: 3px solid darkgray;*/
+padding: 0px 0px 40px 40px;
+max-width: 800px;
+
+}
+.encajar2{
+/*border-radius: 6px;*/
+/*border: 3px solid darkgray;*/
+padding: 30px;
+margin-right: 70px;
+}

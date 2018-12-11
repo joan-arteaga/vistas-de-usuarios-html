@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Vista admins GeoGeeks</title>
+  <link rel="icon" type="image/png" href="./img/gg.png">
+  
+  
+  <link rel="stylesheet" href="css/vista-a.css">
+
+  
+</head>
+
+<body>
+
+  <!DOCTYPE html>
+  <html lang="en">  
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">   
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.0/jquery-confirm.min.css">
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.0/jquery-confirm.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"></script>
+  </head>
+
+  
+  <body>
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>                        
+          </button>
+          <!-- ******************************imagen logo******************* -->
+          <a href="#" class="navbar-left">
+            <img id="logo" style="max-width:110px; height: auto; margin-top: -2px;" src="./img/logo.jpg">
+
+          </a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav">
+            <li id="nosotros"><a href="#" data-toggle="modal" data-target=".bd-example-modal-sm">Nosotros</a></li>
+            <li id="addTask"><a data-target="#myTarea" data-toggle="modal" href="#">Adicionar Tarea</a></li>   
+          </ul>
+
+          <!-- trae el modal para un log-in id='sesion' -->
+          <ul class="nav navbar-nav navbar-right">
+            <!-- esto va en el data-target para abrir el modal: '#login' -->
+            <li data-toggle='modal' data-target='#'>
+              <a href='#'><span class='glyphicon glyphicon-log-in'></span> salir</a>
+              </li>
+
+        </div>
+      </div>
+    </nav>
+    <div class="container-fluid">
+      <div class="row content">
+
+       <!-- este asi de vuelbe todo una  rpmghbvfhbvh -->
+       <!-- <aside class="col-sm-3"> -->
+
+        <div class="w3-container">
+          <div class="panel-group">
+
+            <br>
+            <div>
+              <canvas id="myState">El navegador no soporta CANVAS</canvas>
+            </div> 
+            <br>
+
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a data-toggle="collapse" href="#collapseFilter" class="glyphicon glyphicon-arrow-down"> Filtro de tareas</a>
+                </h4>
+              </div>
+              <div id="collapseFilter" class="panel-collapse collapse">
+               <div class="row">            
+                <div  class="col-sm-6">
+                  <div class="list-group-item">
+                    <label>Asignada a:</label>
+                    <select id="selectionAsg" multiple class="form-control" 
+                    name="comboFiltro"></select>
+                  </div></div>
+                  <div  class="col-sm-6">
+                    <div class="list-group-item">
+                     <label>Prioridad:</label>
+                     <select id="selectionPrd" multiple class="form-control">
+                      <option value="Baja">Baja</option>
+                      <option value="Media">Media</option>
+                      <option value="Alta">Alta</option>
+                      <option value="Urgente">Urgente</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="row">            
+                <div  class="col-sm-6">      
+                  <button id="filter" type="button" class="btn btn-success glyphicon glyphicon-search">Filtrar</button>
+                </div>
+                <div  class="col-sm-6">
+                  <button id="disfiltrate" type="button" class="btn btn-info  glyphicon glyphicon-remove">Quitar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+
+          <br>
+          <div>
+            <canvas id="myPriority">El navegador no soporta CANVAS</canvas>
+          </div> 
+          <br>
+
+          
+        </div>
+      </div>
+
+      <br>
+
+    </aside>
+    <section class="col-sm-9">
+      <section class="row row-eq-height">
+        <div id="id-backlog" class="col-sm-6 col-md-3" ondrop="drop(event)" ondragover="allowDrop(event)">
+          <h3>Backlog</h3>
+        </div>
+        <div id="id-progress" class="col-sm-6 col-md-3" ondrop="drop(event)" ondragover="allowDrop(event)">
+          <h3>Proceso</h3>
+        </div>
+        <div id="id-testing" class="col-sm-6 col-md-3"  ondrop="drop(event)" ondragover="allowDrop(event)">
+          <h3>Testing</h3>
+        </div>
+        <div id="id-finalized" class="col-sm-6 col-md-3"  ondrop="drop(event)" ondragover="allowDrop(event)">
+          <h3>Finalizada</h3>
+        </div>
+      </section>
+    </section>
+    
+  </div>
+</div>
+
+
+<div id="myTarea" class="modal fade" role="dialog" tabindex="-1">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">×</button>
+        <h2>Nueva tarea</h2> 
+      </div>
+      <div class="row">
+        <div  class="col-sm-9">
+          <div class="form-group">
+            <label for="id-task">Tarea:</label>
+            <input type="text" class="form-control" id="id-task" placeholder="Nombre de la tarea">
+          </div>
+        </div>
+        <div  class="col-sm-3">
+          <div class="form-group">
+            <label for="newCombo">Asignado a:</label>
+            <select id="newCombo" class="form-control" name="newCombo">
+              <option value="Ninguno">Ninguno
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div  class="col-sm-9">
+           <div class="form-group">
+            <label for="comment">Descripción:</label>
+            <textarea class="form-control" rows="3" id="comment" placeholder="Descripcion de la tarea"></textarea>
+          </div>
+        </div>
+        <div  class="col-sm-3"><br>
+          <img src="./img/persona.png" 
+          class="img-rounded" alt="Foto de usuario" style="float:right;margin-right:10px;"> 
+        </div>
+      </div>
+      <div class="row">
+        <div  class="col-sm-9">
+         <div id="divRadios" >
+           <input id="baja" name="rdprioridad" type="radio" value="Baja" checked>
+           Baja
+           <input id="media" name="rdprioridad" type="radio" value="Media">
+           Media
+           <input id="alta" name="rdprioridad" type="radio" value="Alta">
+           Alta
+           <input id="urgente" name="rdprioridad" type="radio" value="Urgente">
+           Urgente
+         </div>
+       </div>
+       <div id="tiempo" class="col-sm-2">
+        <input id="horas" type="text" class="form-control" name="msg" placeholder="(Horas)" onkeypress="return valida(event)">
+      </div>
+      <div class="col-sm-1">
+       <img src="https://image.flaticon.com/icons/png/128/149/149313.png"   class="img-reloj" alt="Foto de usuario" style="float:right;margin-right:10px;"> 
+     </div>
+   </div>
+   <div class="modal-footer">
+    <button id="closet" type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+    <button id="id-boton" class="btn btn-width bkgrnd-cyan save-details" type="button" 
+    name="save-details" onclick="nuevaTarea();">Guardar</button>
+  </div>
+</div>
+</div>
+</div>
+<div id="editTarea" class="modal fade" role="dialog" tabindex="-1">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button id="id_edittarea" type="button" class="close" value="d" data-dismiss="modal">×</button>
+        <h2>Editar tarea</h2> 
+      </div>
+      <div class="row">
+        <div  class="col-sm-9">
+          <div class="form-group">
+            <label for="id-edittask">Tarea:</label>
+            <input type="text" class="form-control" id="id-edittask" placeholder="Nombre de la tarea">
+          </div>
+        </div>
+        <div  class="col-sm-3">
+          <div class="form-group">
+            <label for="combo">Asignado a:</label>
+            <select id="combo" class="form-control" name="combo">
+              <option value="Ninguno">Ninguno
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div  class="col-sm-9">
+           <div class="form-group">
+            <label for="comment">Descripción:</label>
+            <textarea class="form-control" rows="3" id="editcomment" placeholder="Descripcion de la tarea"></textarea>
+          </div>
+        </div>
+        <div  class="col-sm-3"><br>
+          <img src="./img/persona.png" 
+          class="img-rounded" alt="Foto de usuario" style="float:right;margin-right:10px;"> 
+        </div>
+      </div>
+      <div class="row">
+        <div  class="col-sm-9">
+         <div id="divRadios" >
+           <input id="editbaja" name="rdprioridad" type="radio" value="Baja" checked>
+           Baja
+           <input id="editmedia" name="rdprioridad" type="radio" value="Media">
+           Media
+           <input id="editalta" name="rdprioridad" type="radio" value="Alta">
+           Alta
+           <input id="editurgente" name="rdprioridad" type="radio" value="Urgente">
+           Urgente
+         </div>
+       </div>
+       <div id="tiempo" class="col-sm-2">
+        <input id="edithoras" type="text" class="form-control" name="msg" placeholder="(Horas)" onkeypress="return valida(event)">
+      </div>
+      <div class="col-sm-1">
+       <img src="https://image.flaticon.com/icons/png/128/149/149313.png"   class="img-reloj" alt="Foto de usuario" style="float:right;margin-right:10px;"> 
+     </div>
+   </div>
+   <div class="modal-footer">
+    <button id="editcloset" type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+    <button id="id-editboton" class="btn btn-width bkgrnd-cyan save-details" type="button" 
+    name="save-details" onclick='actualizaTarea();'>Actualizar</button>
+  </div>
+</div>
+</div>
+</div>
+
+
+<div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Iniciar Sesión</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+
+
+      <div class="modal-body">
+        <form>
+          <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+            <input id="email" type="text" class="form-control" name="email" placeholder="Email">
+          </div>
+          <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+            <input id="password" type="password" class="form-control" name="password" placeholder="Password">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-primary" onclick="login($('#email').val(),$('#password').val());">Guardar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+
+      <iframe src="http://desarrolladores.esri.co/" width="1000px" height="1000px"></iframe>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+<footer class="footer">
+  <div>
+    <a href="http://esri.co/">&copy; Esri</a>
+    <br>
+    <span>2018</span>
+    <br>
+  </div>
+  <div class="ml-auto">
+    <span>Desarrollado por:</span>
+    <br>
+    <a href="http://desarrolladores.esri.co/">Semillero de Innovación Geografica.</a>
+  </div>
+</footer>
+
+</body>
+</html>
+
+
+
+<script  src="js/vista-a.js"></script>
+
+
+</body>
+
+</html>
